@@ -25,29 +25,9 @@ hu_value = ""
 
 
 
+
 #functions
-def artificial():
 
-    global ai_value
-    ai_select = random.randint(1,3)
-    if ai_select  == 1:
-        ai_value = selection_1
-        hvalue.configure(text=ai_value)
-        pass
-    elif ai_select == 2:
-        ai_value = selection_2
-        hvalue.configure(text=ai_value)
-        pass
-    else:
-        ai_value = selection_3
-        hvalue.configure(text=ai_value)
-        pass
-
-    chooseWinner()
-
-    print(ai_select)
-    print(ai_value)
-    pass
 
 
 
@@ -73,16 +53,48 @@ def Scissors_func():
     pass
 
 
+def artificial():
 
-def chooseWinner():
-
-    if hu_value == selection_1 and ai_value == selection_2:
-        ai_score = ai_score + 1
-        print(ai_score)
-
+    global ai_value
+    ai_select = random.randint(1,3)
+    if ai_select  == 1:
+        ai_value = selection_1
+        hvalue.configure(text=ai_value)
+        pass
+    elif ai_select == 2:
+        ai_value = selection_2
+        hvalue.configure(text=ai_value)
+        pass
+    else:
+        ai_value = selection_3
+        hvalue.configure(text=ai_value)
         pass
 
+    
+
+    print(ai_select)
+    print(ai_value)
     pass
+
+
+
+#def chooseWinner():
+#    global score
+#    score = 0
+#
+#    if hu_value == "Rock" and ai_value == "Paper":
+#        score = ai_score + 1
+#        print(score)
+#        pass
+#
+#    elif hu_value == selection_1 and ai_value == selection_3:
+#        ai_score =+ 1
+#        print(score)
+#        pass
+#
+#    print(score)
+#
+#    pass
 
 
 
@@ -142,7 +154,6 @@ scissors.grid(row=9, column=0, columnspan=2, pady=5)
 
 restart = tk.Button(root, text="Restart", font=("Opensans", 16), bg="white", fg="#265BAA", border="2", borderwidth="4", width="10")
 restart.grid(row=10, column=0, columnspan=2, pady=20)
-
 
 
 
